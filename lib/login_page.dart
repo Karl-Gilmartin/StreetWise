@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:street_wise/landing_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +68,7 @@ class LoginPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(25), // Add desired padding value
                       child: TextField(
+                        controller: _nameController,
                         decoration: InputDecoration(
                           labelText: 'Name',
                         ),
@@ -66,6 +77,7 @@ class LoginPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(25), // Add desired padding value
                       child: TextField(
+                        controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           labelText: 'Password',
@@ -94,7 +106,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        // Handle your login logic here
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => LandingPage(name: _nameController.text)));
                       },
                       style: ElevatedButton.styleFrom(
                         primary: Colors.purple.shade900, // Button background color
