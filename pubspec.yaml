@@ -30,6 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  geolocator: ^8.2.0
+  intl: ^0.17.0 
+  google_maps_flutter: ^2.1.1
+    # ^ means any version that is compatible with the specified version
 
 
   # The following adds the Cupertino Icons font to your application.
