@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:street_wise/home_page.dart';
+import 'package:street_wise/report_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                 // Navigate to next page
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => homePage()),
+                  MaterialPageRoute(builder: (context) => ReportPage(name:_usernameController.text)),
                 );
               },
               child: Text('Login'),
