@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:street_wise/landing_page.dart';
+import 'package:street_wise/report_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
